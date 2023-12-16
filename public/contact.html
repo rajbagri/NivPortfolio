@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        :root {
+            --myBlack: #212121;
+            --dullWhite: rgba(255, 255, 255, 0.5);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            background-color: var(--myBlack);
+            display: flex;
+            box-shadow: 0 0 5rem var(--myBlack);
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container::after{
+            content: "Contact Us";
+            position: absolute;
+            left: 16%;
+            top: 46%;
+            z-index: 2;
+            color: var(--dullWhite);
+            font-size: 2vmax;
+        }
+
+        .container img{
+            height: 30vmax;
+        }
+
+        form{
+            min-width: 30vmax;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5vmax;
+        }
+
+        form input{
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: var(--dullWhite);
+            width: 20vmax;
+            font-size: 1vmax;
+            padding-bottom: 7px;
+            padding-left: 3px;
+            transition: all ease 0.4s;
+        }
+
+        form input:focus{
+            font-size: 1.2vmax;
+            color: white;
+        }
+
+        form button{
+            cursor: pointer;
+            padding: 0.3vmax 1.3vmax;
+            font-size: 1.1vmax;
+            background-color: #CBE4DE;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            font-weight: 600;
+            transition: all ease 0.2s;
+        }
+
+        form button:hover{
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="resources/bg.jpg" alt="">
+        <form action="#">
+            <div>
+                <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="Your email">
+            </div>
+            <div>
+                <input type="tel" id="phn" placeholder="Your contact number">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
